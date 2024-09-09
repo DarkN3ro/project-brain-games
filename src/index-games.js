@@ -1,15 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const checkDivider = (number) => {
-  const result = [];
-  for (let a = 1; a <= number; a += 1) {
-    if ((number % a) === 0) {
-      result.push(a);
-    }
-  }
-  return result;
-};
-
 export default (description, getQuestionAndResult) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
