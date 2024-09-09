@@ -6,20 +6,20 @@ const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer
 const getQuestionAndResult = () => {
   const checkPrime = (questionGame) => {
     if (questionGame <= 1) {
-      return 'no';
+      return false;
     }
 
     let y = 2;
     while (y < questionGame) {
       if ((questionGame % y) === 0) {
-        return 'no';
+        return false;
       }
       y += 1;
     }
-    return 'yes';
+    return true;
   };
   const questionGame = _.random(1, 100);
-  const resultGame = checkPrime(questionGame);
+  const resultGame = checkPrime(questionGame) ? 'yes' : 'no';
   return [questionGame, resultGame];
 };
 export default () => {
