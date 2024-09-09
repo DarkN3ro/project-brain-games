@@ -4,21 +4,20 @@ import gameValue, { checkDivider } from '../index-games.js';
 const descriptionGcd = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndResult = () => {
-  const [randomNumberOne, randomNumberTwo] = [_.random(1, 100), _.random(1, 100)];
+  const [randomOne, randomTwo] = [_.random(1, 100), _.random(1, 100)];
   const sameDividerNum = [];
 
-  const findDividerNumberOne = checkDivider(randomNumberOne);
-  const findDividerNumberTwo = checkDivider(randomNumberTwo);
+  const [findDividerOne, findDividerTwo] = [checkDivider(randomOne), checkDivider(randomTwo)];
 
-  for (let m = 0; m < findDividerNumberOne.length; m += 1) {
-    for (let k = 0; k < findDividerNumberTwo.length; k += 1) {
-      if (findDividerNumberOne[m] === findDividerNumberTwo[k]) {
-        sameDividerNum.push(findDividerNumberOne[m]);
+  for (let m = 0; m < findDividerOne.length; m += 1) {
+    for (let k = 0; k < findDividerTwo.length; k += 1) {
+      if (findDividerOne[m] === findDividerTwo[k]) {
+        sameDividerNum.push(findDividerOne[m]);
       }
     }
   }
 
-  const questionGcd = `${randomNumberOne} ${randomNumberTwo}`;
+  const questionGcd = `${randomOne} ${randomTwo}`;
 
   const findMaxNum = Math.max(...sameDividerNum);
   const resultGcd = findMaxNum.toString();
