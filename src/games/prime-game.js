@@ -4,8 +4,7 @@ import gameOption from '../index-games.js';
 const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndResult = () => {
-  const questionGame = _.random(1, 100);
-  const checkPrime = () => {
+  const checkPrime = (questionGame) => {
     if (questionGame <= 1) {
       return 'no';
     }
@@ -18,6 +17,7 @@ const getQuestionAndResult = () => {
     }
     return 'yes';
   };
+  const questionGame = _.random(1, 100);
   const resultGame = checkPrime(questionGame);
   return [questionGame, resultGame];
 };
