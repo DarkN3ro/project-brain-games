@@ -1,28 +1,32 @@
 import _ from 'lodash';
-import gameOption, { checkDivider } from '../index-games.js';
+import gameValue, { checkDivider } from '../index-games.js';
 
-const descriptionGame = 'Find the greatest common divisor of given numbers.';
+const descriptionGcd = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndResult = () => {
   const randomNumberOne = _.random(1, 100);
   const randomNumberTwo = _.random(1, 100);
 
-  const resultOne = checkDivider(randomNumberOne);
-  const resultTwo = checkDivider(randomNumberTwo);
+  const findDividerNumberOne = checkDivider(randomNumberOne);
 
-  const sameNum = [];
-  for (let m = 0; m < resultOne.length; m += 1) {
-    for (let k = 0; k < resultTwo.length; k += 1) {
-      if (resultOne[m] === resultTwo[k]) {
-        sameNum.push(resultOne[m]);
+  const findDividerNumberTwo = checkDivider(randomNumberTwo);
+
+  const sameDividerNum = [];
+  for (let m = 0; m < findDividerNumberOne.length; m += 1) {
+    for (let k = 0; k < findDividerNumberTwo.length; k += 1) {
+      if (findDividerNumberOne[m] === findDividerNumberTwo[k]) {
+        sameDividerNum.push(findDividerNumberOne[m]);
       }
     }
   }
-  const questionGame = `${randomNumberOne} ${randomNumberTwo}`;
-  const findMaxNum = Math.max(...sameNum);
-  const resultGame = findMaxNum.toString();
-  return [questionGame, resultGame];
+
+  const questionGcd = `${randomNumberOne} ${randomNumberTwo}`;
+
+  const findMaxNum = Math.max(...sameDividerNum);
+  const resultGcd = findMaxNum.toString();
+
+  return [questionGcd, resultGcd];
 };
 export default () => {
-  gameOption(descriptionGame, getQuestionAndResult);
+  gameValue(descriptionGcd, getQuestionAndResult);
 };

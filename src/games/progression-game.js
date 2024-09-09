@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import gameOption from '../index-games.js';
+import gameValue from '../index-games.js';
 
-const descriptionGame = 'What number is missing in the progression?';
+const descriptionProgression = 'What number is missing in the progression?';
 
 const getQuestionAndResult = () => {
   const firstNum = _.random(1, 20);
@@ -18,10 +18,10 @@ const getQuestionAndResult = () => {
   }
   const rigthAnswer = numbers[hideNum].toString();
   numbers[hideNum] = '..';
-  const questionGame = numbers.join(' ');
-  const resultGame = rigthAnswer;
-  return [questionGame, resultGame];
+  const questionProgression = numbers.join(' ');
+  const resultProgression = rigthAnswer;
+  return [questionProgression, resultProgression];
 };
 export default () => {
-  gameOption(descriptionGame, getQuestionAndResult);
+  gameValue(descriptionProgression, getQuestionAndResult);
 };

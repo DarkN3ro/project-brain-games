@@ -1,18 +1,18 @@
 import _ from 'lodash';
-import gameOption from '../index-games.js';
+import gameValue from '../index-games.js';
 
-const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const descriptionEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getQuestionAndResult = () => {
-  const checkEvenNum = (questionGame) => {
-    if (questionGame % 2 === 0) {
+  const checkEvenNum = (questionEven) => {
+    if (questionEven % 2 === 0) {
       return 'yes';
     }
     return 'no';
   };
-  const questionGame = _.random(1, 20);
-  const resultGame = checkEvenNum(questionGame);
-  return [questionGame, resultGame];
+  const questionEven = _.random(1, 20);
+  const resultEven = checkEvenNum(questionEven);
+  return [questionEven, resultEven];
 };
 export default () => {
-  gameOption(descriptionGame, getQuestionAndResult);
+  gameValue(descriptionEven, getQuestionAndResult);
 };

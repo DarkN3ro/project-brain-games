@@ -1,13 +1,13 @@
 import _ from 'lodash';
-import gameOption from '../index-games.js';
+import gameValue from '../index-games.js';
 
-const descriptionGame = 'What is the result of the expression?';
+const descriptionCalc = 'What is the result of the expression?';
 const getQuestionAndResult = () => {
   const numOne = _.random(1, 30);
   const numTwo = _.random(1, 30);
   const operations = ['-', '+', '*'];
   const randomOperation = _.sample(operations);
-  const questionGame = `${numOne} ${randomOperation} ${numTwo}`;
+  const questionCalc = `${numOne} ${randomOperation} ${numTwo}`;
 
   let sum;
   if (randomOperation === '*') {
@@ -17,10 +17,10 @@ const getQuestionAndResult = () => {
   } else if (randomOperation === '+') {
     sum = numOne + numTwo;
   }
-  const resultGame = sum.toString();
-  return [questionGame, resultGame];
+  const resultCalc = sum.toString();
+  return [questionCalc, resultCalc];
 };
 
 export default () => {
-  gameOption(descriptionGame, getQuestionAndResult);
+  gameValue(descriptionCalc, getQuestionAndResult);
 };
