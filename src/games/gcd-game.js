@@ -3,10 +3,9 @@ import gameOption, { checkDivider } from '../index-games.js';
 
 const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
-const randomNumberOne = _.random(1, 100);
-const randomNumberTwo = _.random(1, 100);
-
 const getQuestionAndResult = () => {
+  const randomNumberOne = _.random(1, 100);
+  const randomNumberTwo = _.random(1, 99);
   const questionGame = `${randomNumberOne} ${randomNumberTwo}`;
 
   const resultOne = checkDivider(randomNumberOne);

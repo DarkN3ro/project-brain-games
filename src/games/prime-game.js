@@ -8,6 +8,7 @@ const getQuestionAndResult = () => {
     if (questionGame <= 1) {
       return 'no';
     }
+
     let y = 2;
     while (y < questionGame) {
       if ((questionGame % y) === 0) {
