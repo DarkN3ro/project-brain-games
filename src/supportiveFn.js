@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 export const checkPrime = (questionGame) => {
   if (questionGame <= 1) {
     return false;
@@ -15,15 +13,18 @@ export const checkPrime = (questionGame) => {
   return true;
 };
 
-export const randomNumberOne = _.random(1, 100);
-export const randomNumberTwo = _.random(1, 99);
-
-export const checkDivider = (number) => {
+export const checkDivider = (number, number2) => {
   const result = [];
+  const result2 = [];
   for (let a = 1; a <= number; a += 1) {
     if ((number % a) === 0) {
       result.push(a);
     }
   }
-  return result;
+  for (let b = 1; b <= number2; b += 1) {
+    if ((number2 % b) === 0) {
+      result2.push(b);
+    }
+  }
+  return [result, result2];
 };
