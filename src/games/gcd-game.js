@@ -1,11 +1,9 @@
-import _ from 'lodash';
-import gameOption, { checkDivider } from '../index-games.js';
+import gameOption from '../index-games.js';
+import { checkDivider, randomNumberOne, randomNumberTwo } from '../supportiveFn.js';
 
 const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndResult = () => {
-  const randomNumberOne = _.random(1, 100);
-  const randomNumberTwo = _.random(1, 99);
   const questionGame = `${randomNumberOne} ${randomNumberTwo}`;
 
   const resultOne = checkDivider(randomNumberOne);
