@@ -8,13 +8,10 @@ const getQuestionAndResult = () => {
     if (questionGame <= 1) {
       return false;
     }
-
-    let y = 2;
-    while (y < questionGame) {
+    for (let y = 2; y < questionGame; y += 1) {
       if ((questionGame % y) === 0) {
         return false;
       }
-      y += 1;
     }
     return true;
   };
