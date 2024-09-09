@@ -1,32 +1,26 @@
-import readlineSync from 'readline-sync';
 import _ from 'lodash';
-import greeting, { checkAnswer } from '../index.js';
+import gameOption from '../index-games.js';
+
+const descriptionGame = 'What is the result of the expression?';
+const getQuestionAndResult = () => {
+  const numOne = _.random(1, 30);
+  const numTwo = _.random(1, 30);
+  const operations = ['-', '+', '*'];
+  const randomOperation = _.sample(operations);
+  const questionGame = `${numOne} ${randomOperation} ${numTwo}`;
+
+  let sum;
+  if (randomOperation === '*') {
+    sum = numOne * numTwo;
+  } else if (randomOperation === '-') {
+    sum = numOne - numTwo;
+  } else if (randomOperation === '+') {
+    sum = numOne + numTwo;
+  }
+  const resultGame = sum.toString();
+  return [questionGame, resultGame];
+};
 
 export default () => {
-  const userName = greeting();
-  console.log('What is the result of the expression?');
-
-  let i = 0;
-  while (i < 3) {
-    const numOne = _.random(1, 30);
-    const numTwo = _.random(1, 30);
-    const operations = ['-', '+', '*'];
-    const randomOperation = _.sample(operations);
-    const questionSum = `${numOne} ${randomOperation} ${numTwo}`;
-    const answer = readlineSync.question(`Question: ${questionSum} \nYour answer: `);
-    let sum;
-    if (randomOperation === '*') {
-      sum = numOne * numTwo;
-    } else if (randomOperation === '-') {
-      sum = numOne - numTwo;
-    } else if (randomOperation === '+') {
-      sum = numOne + numTwo;
-    }
-    const result = sum.toString();
-    checkAnswer(result, answer, userName);
-
-    i += 1;
-  }
-
-  console.log(`Congratulations, ${userName}!`);
+  gameOption(descriptionGame, getQuestionAndResult);
 };

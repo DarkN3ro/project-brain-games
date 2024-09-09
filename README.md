@@ -1,6 +1,5 @@
 ## Maintainability status:
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/3d70b94e89ecbac1c670/maintainability)](https://codeclimate.com/github/DarkN3ro/frontend-project-44/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/78a9d6dea9f438835e32/maintainability)](https://codeclimate.com/github/DarkN3ro/project-brain-games/maintainability)
 
 ## Description
 
@@ -15,43 +14,43 @@ A set of mini-games "Brain Games".
 ## Run Brain Games
 
 ```bash
-brain-even
+game-even
 ```
 - Paricy check : determine if this number is even or not.
 ```bash
-brain-calc
+game-calc
 ```
 - Calculator : calculate the result of a random arithmetic operation.
 ```bash
-brain-gcd
+game-gcd
 ```
 - The largest common divisor : determine the largest common divisor of two numbers.
 ```bash
-brain-progression
+game-progression
 ```
 - Arithmetic progression : identify the missing progression value.
 ```bash
-brain-prime
+game-prime
 ```
 - Number is prime : determine if this number is a prime number or not.
 
 ## Demo Games
-- brain-even
+- game-even
 
-[![asciicast](https://asciinema.org/a/TOXHmZe1e3y7VZnN9qyRLAcOY.svg)](https://asciinema.org/a/TOXHmZe1e3y7VZnN9qyRLAcOY)
+[![asciicast](https://asciinema.org/a/hhBKoOp7DTHrdLhORkTKYtSoA.svg)](https://asciinema.org/a/hhBKoOp7DTHrdLhORkTKYtSoA)
 
-- brain-calc
+- game-calc
 
-[![asciicast](https://asciinema.org/a/31wrc87CEMsE97XhJmqkQ3mMH.svg)](https://asciinema.org/a/31wrc87CEMsE97XhJmqkQ3mMH)
+[![asciicast](https://asciinema.org/a/R6yMGWqN4f5vORDPX2gHguQGd.svg)](https://asciinema.org/a/R6yMGWqN4f5vORDPX2gHguQGd)
 
-- brain-gcd
+- game-gcd
 
-[![asciicast](https://asciinema.org/a/Z83slaCTnMeDjfCwq0xgGpQvj.svg)](https://asciinema.org/a/Z83slaCTnMeDjfCwq0xgGpQvj)
+[![asciicast](https://asciinema.org/a/gyKvyV1lHTnbStlZf7hYg8FbP.svg)](https://asciinema.org/a/gyKvyV1lHTnbStlZf7hYg8FbP)
 
-- brain-progression
+- game-progression
 
-[![asciicast](https://asciinema.org/a/sT8A2NGP7KILHt4eXKXdWKk7C.svg)](https://asciinema.org/a/sT8A2NGP7KILHt4eXKXdWKk7C)
+[![asciicast](https://asciinema.org/a/m0l2i6b7PQWH1MmWrWXFRPGdr.svg)](https://asciinema.org/a/m0l2i6b7PQWH1MmWrWXFRPGdr)
 
-- brain-prime
+- game-prime
 
-[![asciicast](https://asciinema.org/a/NsghExav8ShKy7LUdFLWeQ7OA.svg)](https://asciinema.org/a/NsghExav8ShKy7LUdFLWeQ7OA)
+[![asciicast](https://asciinema.org/a/xzukFdQQ2O2dHUVqtfAxoaWmQ.svg)](https://asciinema.org/a/xzukFdQQ2O2dHUVqtfAxoaWmQ)

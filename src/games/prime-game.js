@@ -1,19 +1,26 @@
-import readlineSync from 'readline-sync';
 import _ from 'lodash';
-import greeting, { checkAnswer, checkPrime } from '../index.js';
+import gameOption from '../index-games.js';
 
+const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const getQuestionAndResult = () => {
+  const questionGame = _.random(1, 100);
+  const checkPrime = () => {
+    if (questionGame <= 1) {
+      return 'no';
+    }
+    let y = 2;
+    while (y < questionGame) {
+      if ((questionGame % y) === 0) {
+        return 'no';
+      }
+      y += 1;
+    }
+    return 'yes';
+  };
+  const resultGame = checkPrime(questionGame);
+  return [questionGame, resultGame];
+};
 export default () => {
-  const userName = greeting();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
-  let i = 0;
-  while (i < 3) {
-    const questionValue = _.random(1, 100);
-    const result = checkPrime(questionValue);
-    const answer = readlineSync.question(`Question: ${questionValue} \nYour answer: `);
-    checkAnswer(result, answer, userName);
-    i += 1;
-  }
-
-  console.log(`Congratulations, ${userName}!`);
+  gameOption(descriptionGame, getQuestionAndResult);
 };
