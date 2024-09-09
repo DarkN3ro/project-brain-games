@@ -5,8 +5,7 @@ const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndResult = () => {
   const randomNumberOne = _.random(1, 100);
-  const randomNumberTwo = _.random(1, 99);
-  const questionGame = `${randomNumberOne} ${randomNumberTwo}`;
+  const randomNumberTwo = _.random(1, 100);
 
   const resultOne = checkDivider(randomNumberOne);
   const resultTwo = checkDivider(randomNumberTwo);
@@ -19,7 +18,7 @@ const getQuestionAndResult = () => {
       }
     }
   }
-
+  const questionGame = `${randomNumberOne} ${randomNumberTwo}`;
   const findMaxNum = Math.max(...sameNum);
   const resultGame = findMaxNum.toString();
   return [questionGame, resultGame];
