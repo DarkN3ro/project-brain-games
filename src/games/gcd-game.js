@@ -7,13 +7,12 @@ const getQuestionAndResult = () => {
   const [randomOne, randomTwo] = [_.random(1, 100), _.random(1, 100)];
   const sameDividerNum = [];
 
-  const [findDividerOne, findDividerTwo] = [checkDivider(randomOne), checkDivider(randomTwo)];
+  const findDividerOne = checkDivider(randomOne);
+  const findDividerTwo = checkDivider(randomTwo);
 
   for (let m = 0; m < findDividerOne.length; m += 1) {
-    for (let k = 0; k < findDividerTwo.length; k += 1) {
-      if (findDividerOne[m] === findDividerTwo[k]) {
-        sameDividerNum.push(findDividerOne[m]);
-      }
+    if (findDividerTwo.includes(findDividerOne[m])) {
+      sameDividerNum.push(findDividerOne[m]);
     }
   }
 
